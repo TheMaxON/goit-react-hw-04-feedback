@@ -14,7 +14,7 @@ const App = () => {
   useEffect(() => {
     countTotalFeedback();
     countPositiveFeedbackPercentage();
-  }, [good, neutral, bad, total]);
+  });
 
   const onLeaveFeedback = type => {
     switch (type) {
@@ -37,7 +37,6 @@ const App = () => {
 
   const countTotalFeedback = () => {
     setTotal(good + neutral + bad);
-    return total;
   };
 
   const countPositiveFeedbackPercentage = () => {
